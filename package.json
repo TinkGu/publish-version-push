@@ -1,0 +1,43 @@
+{
+  "name": "get-publish-version-info",
+  "version": "1.1.0",
+  "description": "run tasks or push events after published new version",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TinkGu/publish-version-push.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "ci",
+    "publish",
+    "changelog",
+    "standard-version",
+    "version"
+  ],
+  "author": "TinkGu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TinkGu/publish-version-push/issues"
+  },
+  "homepage": "https://github.com/TinkGu/publish-version-push#readme",
+  "scripts": {
+    "release": "standard-version --preset angular",
+    "postpublish": "git push origin HEAD --follow-tags"
+  },
+  "devDependencies": {
+    "conventional-changelog-angular": "^5.0.13",
+    "eslint": "7.13.0",
+    "prettier": "^2.5.1",
+    "standard-version": "9.1.1"
+  },
+  "dependencies": {
+    "changelog-parser": "^2.8.0",
+    "dayjs": "^1.10.7"
+  },
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
+  }
+}
